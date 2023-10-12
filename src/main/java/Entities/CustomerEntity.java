@@ -1,6 +1,6 @@
 package Entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity
@@ -100,5 +100,17 @@ public class CustomerEntity {
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerEntity{" +
+                "cusId=" + cusId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", birthday=" + birthday +
+                ", gender=" + gender +
+                '}';
     }
 }

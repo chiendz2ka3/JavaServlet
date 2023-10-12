@@ -1,6 +1,7 @@
 package Entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "book", schema = "dbo", catalog = "thuchanh")
