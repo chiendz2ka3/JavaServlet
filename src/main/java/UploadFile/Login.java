@@ -30,12 +30,10 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doPost(req, resp);
-        System.out.println("=========");
         try {
             String UserName = req.getParameter("username");
             String PassWord = req.getParameter("password");
             if(UserName!=null &&  PassWord!=null){
-                System.out.println("???????????????????");
                 HttpSession session = req.getSession();
                 session.setAttribute("username" , UserName);
                 resp.sendRedirect("UploadFile-servlet");

@@ -16,21 +16,37 @@ public class Customeriml implements Customer {
 
     @Override
     public ArrayList<CustomerEntity> GetListCus() {
-        ArrayList<CustomerEntity> arrayList = new ArrayList<>();
-        EntityManager enty = entityManagerFactory.createEntityManager();
-        arrayList = (ArrayList)enty.createQuery("SELECT c FROM Entity CustomerEntity" , Entity.class).getResultList();
-        System.out.println("count22: "+ arrayList.size());
-        enty.close();
-        return arrayList;
+        try {
+            ArrayList<CustomerEntity> arrayList = new ArrayList<>();
+            EntityManager enty = entityManagerFactory.createEntityManager();
+            EntityTransaction entityTransaction = enty.getTransaction();
+            entityTransaction.begin();
+            for(CustomerEntity data : enty.createQuery("from  CustomerEntity " , CustomerEntity.class).getResultList()){
+                arrayList.add(data);
+            }
+            System.out.println("da log duoc vao ben trong ham 12");
+            enty.getTransaction().commit();
+            enty.close();
+            return arrayList;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
     }
 
     @Override
-    public void AddNewCustomer(CustomerEntity data) {
-        EntityManager enty = entityManagerFactory.createEntityManager();
-        CustomerEntity entity = new CustomerEntity();
-        enty.getTransaction().begin();
-        enty.persist(entity);
-        enty.getTransaction().commit();
-        enty.close();
+    public Boolean AddNewCustomer(CustomerEntity data) {
+       try {
+           EntityManager enty = entityManagerFactory.createEntityManager();
+           EntityTransaction entityTransaction = enty.getTransaction();
+           enty.getTransaction().begin();
+           enty.persist(data);
+           enty.getTransaction().commit();
+           enty.close();
+           return true;
+       }catch (Exception E){
+
+       }
+        return false;
     }
 }

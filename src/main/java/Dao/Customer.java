@@ -6,5 +6,5 @@ import java.util.ArrayList;
 
 public interface Customer {
     public ArrayList<CustomerEntity> GetListCus();
-    public void AddNewCustomer(CustomerEntity data);
+    public Boolean AddNewCustomer(CustomerEntity data);
 }
