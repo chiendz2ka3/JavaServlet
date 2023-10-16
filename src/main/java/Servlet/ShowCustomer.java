@@ -76,12 +76,12 @@ public class ShowCustomer extends HttpServlet {
         writer.write(" </tr>");
         for ( CustomerEntity data : Array ) {
             writer.write("<tr>");
-            writer.write("<th>"+data.getCusId()+"</th>");
-            writer.write("<th>"+data.getFirstName()+"</th>");
-            writer.write("<th>"+data.getLastName()+"</th>");
-            writer.write("<th>"+data.getAddress()+"</th>");
-            writer.write("<th>"+data.getBirthday()+"</th>");
-            writer.write("<th>"+data.getGender()+"</th>");
+            writer.write("<td>"+data.getCusId()+"</td>");
+            writer.write("<td>"+data.getFirstName()+"</td>");
+            writer.write("<td>"+data.getLastName()+"</td>");
+            writer.write("<td>"+data.getAddress()+"</td>");
+            writer.write("<td>"+data.getBirthday()+"</td>");
+            writer.write("<td>"+data.getGender()+"</td>");
            // writer.write("<th><button type=\"button\">Add New</button></th>");
             writer.write(" </tr>");
         }

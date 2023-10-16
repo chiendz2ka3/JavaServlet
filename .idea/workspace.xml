@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feba6ad2-30c5-4148-ada2-a8571a275291" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Servlet/AddNewCusTomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/BookEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/BookEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/CustomerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/AddNewCusTomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/AddNewCusTomer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UploadFile/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UploadFile/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
         <option value="package.json" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -131,6 +128,10 @@
       <workItem from="1697110788193" duration="7328000" />
       <workItem from="1697203640448" duration="12208000" />
       <workItem from="1697269435779" duration="2925000" />
+      <workItem from="1697276631790" duration="111000" />
+      <workItem from="1697282413771" duration="5875000" />
+      <workItem from="1697376301942" duration="7261000" />
+      <workItem from="1697475305889" duration="755000" />
     </task>
     <servers />
   </component>
