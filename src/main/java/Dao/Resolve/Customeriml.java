@@ -24,7 +24,6 @@ public class Customeriml implements Customer {
             for(CustomerEntity data : enty.createQuery("from  CustomerEntity " , CustomerEntity.class).getResultList()){
                 arrayList.add(data);
             }
-            System.out.println("da log duoc vao ben trong ham 12");
             enty.getTransaction().commit();
             enty.close();
             return arrayList;
@@ -48,5 +47,26 @@ public class Customeriml implements Customer {
 
        }
         return false;
+    }
+
+    @Override
+    public boolean DeleteCustomer(int id) {
+        try {
+            EntityManager enty = entityManagerFactory.createEntityManager();
+            EntityTransaction entityTransaction = enty.getTransaction();
+            entityTransaction.begin();
+            CustomerEntity customer = enty.find(CustomerEntity.class , 1);
+            enty.remove(customer);
+            enty.getTransaction().commit();
+            enty.close();
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
+
+    @Override
+    public void UpdateCustomer(int id) {
+
     }
 }

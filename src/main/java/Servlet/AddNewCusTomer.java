@@ -46,10 +46,8 @@ public class AddNewCusTomer extends HttpServlet {
 //       }
         req.getRequestDispatcher("View/Home.jsp").forward(req , resp);
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-      //  super.doPost(req, resp);
         try {
             String FirstName = req.getParameter("FirstName");
             String LastName = req.getParameter("LastName");

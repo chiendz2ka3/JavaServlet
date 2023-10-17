@@ -82,7 +82,6 @@ public class ShowCustomer extends HttpServlet {
             writer.write("<td>"+data.getAddress()+"</td>");
             writer.write("<td>"+data.getBirthday()+"</td>");
             writer.write("<td>"+data.getGender()+"</td>");
-           // writer.write("<th><button type=\"button\">Add New</button></th>");
             writer.write(" </tr>");
         }
         writer.write("</table>");
