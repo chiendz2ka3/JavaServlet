@@ -28,64 +28,68 @@ public class ShowCustomer extends HttpServlet {
             for (CustomerEntity x : Array) {
                 System.out.println(data.toString());
             }
+            req.setAttribute("List" , Array);
+            System.out.println("da log duoc vao trong ham");
+            req.getRequestDispatcher("View/ShowPage.jsp").forward(req , resp);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
-        Writer writer = resp.getWriter();
-        writer.write("<html>" +
-                "<head>\n" +
-                "<style>\n" +
-                ".button {\n" +
-                "  border: none;\n" +
-                "  color: white;\n" +
-                "  padding: 15px 32px;\n" +
-                "  text-align: center;\n" +
-                "  text-decoration: none;\n" +
-                "  display: inline-block;\n" +
-                "  font-size: 16px;\n" +
-                "  margin: 4px 2px;\n" +
-                "  cursor: pointer;\n" +
-                "}" +
-                "table {\n" +
-                "  font-family: arial, sans-serif;\n" +
-                "  border-collapse: collapse;\n" +
-                "  width: 100%;\n" +
-                "}\n" +
-                "\n" +
-                "td, th {\n" +
-                "  border: 1px solid #dddddd;\n" +
-                "  text-align: left;\n" +
-                "  padding: 8px;\n" +
-                "}\n" +
-                "\n" +
-                "tr:nth-child(even) {\n" +
-                "  background-color: #dddddd;\n" +
-                "}\n" +
-                "</style>\n" +
-                "</head>" +
-                "<body>");
-        writer.write("<a href='/demo/AddNewCusTomer-servlet'>Visit W3Schools.com!</a>");
-        writer.write("<table>");
-        writer.write("<tr>");
-        writer.write("<th>CusID</th>");
-        writer.write("<th>FirstName</th>");
-        writer.write("<th>LastName</th>");
-        writer.write("<th>Address</th>");
-        writer.write("<th>Birthday</th>");
-        writer.write("<th>Gender</th>");
-        writer.write(" </tr>");
-        for ( CustomerEntity data : Array ) {
-            writer.write("<tr>");
-            writer.write("<td>"+data.getCusId()+"</td>");
-            writer.write("<td>"+data.getFirstName()+"</td>");
-            writer.write("<td>"+data.getLastName()+"</td>");
-            writer.write("<td>"+data.getAddress()+"</td>");
-            writer.write("<td>"+data.getBirthday()+"</td>");
-            writer.write("<td>"+data.getGender()+"</td>");
-            writer.write(" </tr>");
-        }
-        writer.write("</table>");
-        writer.write("</body></html>");
+//        Writer writer = resp.getWriter();
+//        writer.write("<html>" +
+//                "<head>\n" +
+//                "<style>\n" +
+//                ".button {\n" +
+//                "  border: none;\n" +
+//                "  color: white;\n" +
+//                "  padding: 15px 32px;\n" +
+//                "  text-align: center;\n" +
+//                "  text-decoration: none;\n" +
+//                "  display: inline-block;\n" +
+//                "  font-size: 16px;\n" +
+//                "  margin: 4px 2px;\n" +
+//                "  cursor: pointer;\n" +
+//                "}" +
+//                "table {\n" +
+//                "  font-family: arial, sans-serif;\n" +
+//                "  border-collapse: collapse;\n" +
+//                "  width: 100%;\n" +
+//                "}\n" +
+//                "\n" +
+//                "td, th {\n" +
+//                "  border: 1px solid #dddddd;\n" +
+//                "  text-align: left;\n" +
+//                "  padding: 8px;\n" +
+//                "}\n" +
+//                "\n" +
+//                "tr:nth-child(even) {\n" +
+//                "  background-color: #dddddd;\n" +
+//                "}\n" +
+//                "</style>\n" +
+//                "</head>" +
+//                "<body>");
+//        writer.write("<a href='/demo/AddNewCusTomer-servlet'>Visit W3Schools.com!</a>");
+//        writer.write("<table>");
+//        writer.write("<tr>");
+//        writer.write("<th>CusID</th>");
+//        writer.write("<th>FirstName</th>");
+//        writer.write("<th>LastName</th>");
+//        writer.write("<th>Address</th>");
+//        writer.write("<th>Birthday</th>");
+//        writer.write("<th>Gender</th>");
+//        writer.write(" </tr>");
+//        for ( CustomerEntity data : Array ) {
+//            writer.write("<tr>");
+//            writer.write("<td>"+data.getCusId()+"</td>");
+//            writer.write("<td>"+data.getFirstName()+"</td>");
+//            writer.write("<td>"+data.getLastName()+"</td>");
+//            writer.write("<td>"+data.getAddress()+"</td>");
+//            writer.write("<td>"+data.getBirthday()+"</td>");
+//            writer.write("<td>"+data.getGender()+"</td>");
+//            writer.write(" </tr>");
+//        }
+//        writer.write("</table>");
+//        writer.write("</body></html>");
+
     }
 
     @Override
