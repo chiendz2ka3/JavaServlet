@@ -52,10 +52,6 @@
         <th>Birthday</th>
         <th>Gender</th>
     </tr>
-<%
-    List<CustomerEntity> Listuuu = (ArrayList<CustomerEntity>)request.getAttribute("List");
-    System.out.println("Count: "+ Listuuu.size());
-  %>
 <%--    for ( int i = 0; i <Listuuu.size(); i++){ %>--%>
 <%--   <tr>--%>
 <%--        <td><%=Listuuu.get(i).getCusId()%></td>--%>
@@ -67,16 +63,47 @@
 <%--        <td><button onclick="" type="button">Delete Me!</button></td>--%>
 <%--    </tr>--%>
 <%--<%}%>--%>
-        <jsp:useBean id="Listuuu" scope="request" type="java.util.List"/>
-        <c:forEach var="item" items="${Listuuu}">
+<%--        <jsp:useBean id="Listuuu" scope="request" type="java.util.List"/>--%>
+        <c:forEach var="item" items="${List}">
             <tr>
-                <%
-                    System.out.println("LLLLLLLLLL");
-                %>
-<%--                <td><c:out value="${}" /></td>--%>
+                <td><c:out value="${item.getCusId()}" /></td>
+                <td><c:out value="${item.getFirstName()}" /></td>
+                <td><c:out value="${item.getLastName()}" /></td>
+                <td><c:out value="${item.getAddress()}" /></td>
+                <td><c:out value="${item.getBirthday()}" /></td>
+                <td>
+                    <c:if test="${item.getGender() == false}">
+                        <c:out value="Female" />
+                    </c:if>
+                    <c:if test="${item.getGender() == true}">
+                        <c:out value="male" />
+                    </c:if>
+                </td>
+                <td><a href="/demo/DeleteCustomerServlet?sid=${item.getCusId()}">Delete Me!</a></td>
             </tr>
         </c:forEach>
 </table>
+<div>
+    <c:choose>
+        <c:when test="${CountPage > 1}">
+            <a href="pagingServlet?idpage=${CountPage-1}">Trang trước</a>
+        </c:when>
+        <c:otherwise>
+            Trang trước
+        </c:otherwise>
+    </c:choose>
+
+    <c:out value="${CountPage}"/>
+
+    <c:choose>
+        <c:when test="${CountPage < 2}">
+            <a href="pagingServlet?page=${page+1}">Trang sau</a>
+        </c:when>
+        <c:otherwise>
+            Trang sau
+        </c:otherwise>
+    </c:choose>
+</div>
 
 </body>
 </html>

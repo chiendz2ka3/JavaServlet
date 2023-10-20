@@ -21,15 +21,15 @@ public class ShowCustomer extends HttpServlet {
         ArrayList<CustomerEntity> Array = new ArrayList<>();
         try {
             Customeriml data = new Customeriml();
-            //ArrayList<CustomerEntity> Array = new ArrayList<>();
-            System.out.println("da log vao 1");
             Array = data.GetListCus();
-            System.out.println("count: " + Array.size());
+            //System.out.println("count: " + Array.size());
             for (CustomerEntity x : Array) {
                 System.out.println(data.toString());
             }
+            int CountPage = Array.size()/2;
             req.setAttribute("List" , Array);
-            System.out.println("da log duoc vao trong ham");
+            System.out.println("count: " + CountPage);
+            req.setAttribute("CountPage" , CountPage);
             req.getRequestDispatcher("View/ShowPage.jsp").forward(req , resp);
         } catch (Exception e) {
             System.err.println(e.getMessage());

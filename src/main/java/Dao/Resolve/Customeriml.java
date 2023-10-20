@@ -55,12 +55,15 @@ public class Customeriml implements Customer {
             EntityManager enty = entityManagerFactory.createEntityManager();
             EntityTransaction entityTransaction = enty.getTransaction();
             entityTransaction.begin();
-            CustomerEntity customer = enty.find(CustomerEntity.class , 1);
+            CustomerEntity customer = enty.find(CustomerEntity.class , id);
+            if(customer==null) return false;
             enty.remove(customer);
+            System.out.println(" loged funcion delete customer");
             enty.getTransaction().commit();
             enty.close();
             return true;
         }catch (Exception e){
+            System.err.println(e.getMessage());
             return false;
         }
     }
