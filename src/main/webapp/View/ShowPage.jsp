@@ -38,6 +38,11 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+        page{
+            font-size: 10px;
+            color: blue;
+            text-decoration: aquamarine;
+        }
     </style>
     <title>Title</title>
 </head>
@@ -83,27 +88,8 @@
             </tr>
         </c:forEach>
 </table>
-<div>
-    <c:choose>
-        <c:when test="${CountPage > 1}">
-            <a href="pagingServlet?idpage=${CountPage-1}">Trang trước</a>
-        </c:when>
-        <c:otherwise>
-            Trang trước
-        </c:otherwise>
-    </c:choose>
-
-    <c:out value="${CountPage}"/>
-
-    <c:choose>
-        <c:when test="${CountPage < 2}">
-            <a href="pagingServlet?page=${page+1}">Trang sau</a>
-        </c:when>
-        <c:otherwise>
-            Trang sau
-        </c:otherwise>
-    </c:choose>
-</div>
-
+    <c:forEach begin="1" end="${CountPage}" var="i">
+        <a class="page" href="/demo/DividePage?idpage=${i}">${i}</a>
+    </c:forEach>
 </body>
 </html>

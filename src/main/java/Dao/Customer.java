@@ -3,6 +3,7 @@ package Dao;
 import Entities.CustomerEntity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface Customer {
     public ArrayList<CustomerEntity> GetListCus();
@@ -10,4 +11,6 @@ public interface Customer {
 
     public boolean DeleteCustomer(int id);
     public void UpdateCustomer(int id);
+
+    public List<CustomerEntity> Paging(int CurrentPage , int RecordPage);
 }

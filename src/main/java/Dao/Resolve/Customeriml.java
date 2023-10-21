@@ -5,6 +5,7 @@ import Entities.CustomerEntity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Customeriml implements Customer {
     private EntityManagerFactory entityManagerFactory;
@@ -71,5 +72,25 @@ public class Customeriml implements Customer {
     @Override
     public void UpdateCustomer(int id) {
 
+    }
+
+    @Override
+    public List<CustomerEntity> Paging(int CurrentPage, int RecordPage) {
+        List<CustomerEntity> CustomerEntitylist = new ArrayList<>();
+        EntityManager enty = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = enty.getTransaction();
+        entityTransaction.begin();
+            try {
+                Query query = enty.createQuery("from  CustomerEntity " , CustomerEntity.class);
+                query.setFirstResult((CurrentPage-1) *RecordPage);
+                query.setMaxResults(RecordPage);
+                CustomerEntitylist = query.getResultList();
+                enty.getTransaction().commit();
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }finally {
+                enty.close();
+            }
+        return CustomerEntitylist;
     }
 }

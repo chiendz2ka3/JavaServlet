@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feba6ad2-30c5-4148-ada2-a8571a275291" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Servlet/DeleteCustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Servlet/DividePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/DeleteCustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/DeleteCustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/DividePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/DividePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/View/ShowPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/View/ShowPage.jsp" afterDir="false" />
     </list>
@@ -138,7 +139,11 @@
       <workItem from="1697563279473" duration="424000" />
       <workItem from="1697693564016" duration="10821000" />
       <workItem from="1697738740562" duration="435000" />
-      <workItem from="1697802392893" duration="10938000" />
+      <workItem from="1697802392893" duration="12361000" />
+      <workItem from="1697875019488" duration="3883000" />
+      <workItem from="1697883140605" duration="1079000" />
+      <workItem from="1697884729212" duration="411000" />
+      <workItem from="1697887723432" duration="633000" />
     </task>
     <servers />
   </component>
@@ -160,18 +165,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="5" />
+          <line>9</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

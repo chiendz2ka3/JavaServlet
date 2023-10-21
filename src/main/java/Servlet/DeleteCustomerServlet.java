@@ -18,10 +18,13 @@ public class DeleteCustomerServlet extends HttpServlet {
         int id = Integer.parseInt(idcustomer);
         Customeriml customeriml = new Customeriml();
         boolean check = customeriml.DeleteCustomer(id);
+        int CountPage = customeriml.GetListCus().size()/2;
+        if(customeriml.GetListCus().size()%2!=0) CountPage++;
+        req.setAttribute("CountPage" , CountPage);
         if (check) resp.sendRedirect("ShowCustomer-servlet");
         else {
             System.out.println(" you have some error");
-            resp.sendRedirect("ShowCustomer-servlet");
+            req.getRequestDispatcher("View/ShowPage.jsp").forward(req , resp);
         }
 
     }

@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "ShowCustomer", value = "/ShowCustomer-servlet")
 public class ShowCustomer extends HttpServlet {
@@ -18,17 +19,17 @@ public class ShowCustomer extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        ArrayList<CustomerEntity> Array = new ArrayList<>();
+        List<CustomerEntity> Array = new ArrayList<>();
         try {
             Customeriml data = new Customeriml();
-            Array = data.GetListCus();
+            Array = data.Paging(1 , 2);
             //System.out.println("count: " + Array.size());
             for (CustomerEntity x : Array) {
                 System.out.println(data.toString());
             }
-            int CountPage = Array.size()/2;
+            int CountPage = data.GetListCus().size()/2;
+            if(data.GetListCus().size()%2!=0) CountPage++;
             req.setAttribute("List" , Array);
-            System.out.println("count: " + CountPage);
             req.setAttribute("CountPage" , CountPage);
             req.getRequestDispatcher("View/ShowPage.jsp").forward(req , resp);
         } catch (Exception e) {
