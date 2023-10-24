@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feba6ad2-30c5-4148-ada2-a8571a275291" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Servlet/UploadImagServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/UploadFile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/725f5fd9-fae5-40fa-a25d-6269df43ce9b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/725f5fd9-fae5-40fa-a25d-6269df43ce9b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/725f5fd9-fae5-40fa-a25d-6269df43ce9b/storage_v2/_src_/database/thuchanh.dT_bXA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/725f5fd9-fae5-40fa-a25d-6269df43ce9b/storage_v2/_src_/database/thuchanh.dT_bXA/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Resolve/Customeriml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/DeleteCustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/DeleteCustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/DividePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/DividePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet/ShowCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/CustomerEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/View/ShowPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/View/ShowPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +25,8 @@
       <list>
         <option value="package.json" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -61,7 +63,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_directory_selection&quot;: &quot;D:/Intellij/demo/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Intellij/demo/lib/javax.transaction.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Intellij/demo/src/main/java/Entities/CustomerEntity.java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -70,6 +72,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;D:/Intellij/demo/src/main/java/Entities/CustomerEntity.java&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -83,8 +86,8 @@
       <recent name="D:\Intellij\demo\src\main\resources\META-INF" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
       <recent name="Entities" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager">
@@ -143,7 +146,9 @@
       <workItem from="1697875019488" duration="3883000" />
       <workItem from="1697883140605" duration="1079000" />
       <workItem from="1697884729212" duration="411000" />
-      <workItem from="1697887723432" duration="633000" />
+      <workItem from="1697887723432" duration="8874000" />
+      <workItem from="1698061790949" duration="10552000" />
+      <workItem from="1698127958953" duration="1012000" />
     </task>
     <servers />
   </component>

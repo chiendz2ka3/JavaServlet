@@ -26,6 +26,9 @@ public class CustomerEntity {
     @Basic
     @Column(name = "Gender")
     private Boolean gender;
+    @Basic
+    @Column(name = "UrlImage")
+    private String urlImage;
 
     public CustomerEntity(String firstName, String lastName, String address, Date birthday, Boolean gender) {
         this.firstName = firstName;
@@ -123,5 +126,13 @@ public class CustomerEntity {
                 ", birthday=" + birthday +
                 ", gender=" + gender +
                 '}';
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 }

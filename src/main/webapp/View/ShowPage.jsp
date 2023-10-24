@@ -83,7 +83,7 @@
                     <c:if test="${item.getGender() == true}">
                         <c:out value="male" />
                     </c:if>
-                </td>
+                </td>S
                 <td><a href="/demo/DeleteCustomerServlet?sid=${item.getCusId()}">Delete Me!</a></td>
             </tr>
         </c:forEach>
