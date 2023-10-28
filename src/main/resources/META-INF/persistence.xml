@@ -6,6 +6,7 @@
     <persistence-unit name="customer">
         <class>Entities.CustomerEntity</class>
         <class>Entities.BookEntity</class>
+        <class>Entities.EmployeeEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:sqlserver://localhost:1433;database=thuchanh"/>
             <property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>

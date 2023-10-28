@@ -44,6 +44,13 @@ public class AddNewCusTomer extends HttpServlet {
 //       }catch (Exception e){
 //            System.out.println(e.getMessage());
 //       }
+        String idValue = req.getParameter("sid");
+        System.out.println("iduser: "+ idValue);
+        int id = Integer.parseInt(idValue);
+        Customeriml resovle = new Customeriml();
+        CustomerEntity customer = resovle.FindUserWithid(id);
+        System.out.println(customer.toString());
+        req.setAttribute("Customer" , customer);
         req.getRequestDispatcher("View/Home.jsp").forward(req , resp);
     }
     @Override

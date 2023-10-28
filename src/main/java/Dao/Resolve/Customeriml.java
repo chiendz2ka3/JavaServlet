@@ -70,8 +70,34 @@ public class Customeriml implements Customer {
     }
 
     @Override
-    public void UpdateCustomer(int id) {
+    public void UpdateCustomer(CustomerEntity data) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            CustomerEntity customer = entityManager.find(CustomerEntity.class , data.getCusId());
+            if(customer!=null){
+                customer.setFirstName(data.getFirstName());
+                customer.setLastName(data.getLastName());
+                customer.setAddress(data.getAddress());
+                customer.setGender(data.getGender());
+            }
+        }catch (Exception e){
+            entityTransaction.rollback();
+            System.out.println(e.getMessage());
+        }finally {
+            entityManager.close();
+        }
+    }
 
+    @Override
+    public CustomerEntity FindUserWithid(int id) {
+        EntityManager entity = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entity.getTransaction();
+        CustomerEntity customer = entity.find(CustomerEntity.class , id);
+        entity.close();
+        if(customer!=null) return customer;
+        else return null;
     }
 
     @Override

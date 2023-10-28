@@ -10,7 +10,8 @@ public interface Customer {
     public Boolean AddNewCustomer(CustomerEntity data);
 
     public boolean DeleteCustomer(int id);
-    public void UpdateCustomer(int id);
+    public void UpdateCustomer(CustomerEntity data);
+    public CustomerEntity FindUserWithid(int id);
 
     public List<CustomerEntity> Paging(int CurrentPage , int RecordPage);
 }

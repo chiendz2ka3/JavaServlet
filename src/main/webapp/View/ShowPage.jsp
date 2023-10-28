@@ -85,6 +85,7 @@
                     </c:if>
                 </td>S
                 <td><a href="/demo/DeleteCustomerServlet?sid=${item.getCusId()}">Delete Me!</a></td>
+                <td><a href="/demo/AddNewCusTomer-servlet?sid=${item.getCusId()}">update</a></td>
             </tr>
         </c:forEach>
 </table>
